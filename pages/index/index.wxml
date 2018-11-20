@@ -1,0 +1,19 @@
+<view class='wrapper'>
+	<view class='nav-bar'>
+		<view class='bar-item' wx:for='{{newsTypeList}}'>{{item}}</view>
+	</view>
+
+	<view class='news-list' >
+		<view class='news-item' wx:for="{{newsList}}">
+			<view class='news-text'>
+				<view class='news-title'>{{item.title}}</view>
+				<view class='news-info'>
+					<view wx:if="{{item.author}}" class='news-author'>{{item.author}}</view>
+					<view class='news-date'>{{item.date}}</view>
+				</view>
+			</view>
+			<image  class='news-img' src='{{item.img}}'></image>
+		</view>
+	</view>
+
+</view>
