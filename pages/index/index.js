@@ -20,6 +20,7 @@ Page({
 				let len = result.length;
 				for(let i=0;i<len;i++){
 					let news = {};
+					news.id = result[i].id;
 					news.title = result[i].title;
 					news.date = result[i].date;
 					news.date = news.date.slice(11,16);
@@ -46,9 +47,9 @@ Page({
 		})
 	},
 	//跳转到细节页面
-  bindViewTap: function() {
+  bindViewTap: ()=> {
     wx.navigateTo({
-      url: '../details/details'
+			url: '/pages/details/details?id=' +'1523074607642'
     })
   },
 })

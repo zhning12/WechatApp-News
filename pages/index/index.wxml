@@ -4,7 +4,7 @@
 	</view>
 
 	<view class='news-list' >
-		<view class='news-item' wx:for="{{newsList}}">
+		<view class='news-item' wx:for="{{newsList}}" bindtap='bindViewTap'>
 			<view class='news-text'>
 				<view class='news-title'>{{item.title}}</view>
 				<view class='news-info'>
