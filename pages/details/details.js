@@ -19,6 +19,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad(options) {
+		console.log(options.id);
 		this.setData({
 			newsId: options.id ? options.id : this.data.newsId
 		})
@@ -37,10 +38,6 @@ Page({
 				let result = res.data.result;
 				let newsContent = [];
 				let content = result.content;
-				let len = result.content.length;
-				for(let i=0; i<len;i++){
-					newsContent[i]=`<${content[i].type} src='${content[i].src}'>${content[i].text}</${content[i].type}>`;
-				}
 				this.setData({
 					newsImage: result.firstImage,
 					newsDate: result.date.slice(11,16),
@@ -49,8 +46,7 @@ Page({
 					newsTitle: result.title,
 					newsContent: newsContent,
 					content:content
-				})
-				
+				});
 			},
 			complete:()=>{
 				callback && callback();

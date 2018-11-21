@@ -1,7 +1,17 @@
-<view class='news-contentWrap'>
-	<view wx:for="{{content}}" class='news-content'>
-		<text class='{{item.type}}'>{{item.text}}</text>
-		<image  wx:if="{{item.type=='image'}}" src='{{item.src}}'></image>
+<view class="wrapper">
+	<view class="news-title">{{newsTitle}}</view>
+	<view class="textWrapper">
+		<view class="author-date">
+			<text class="author" wx:if="{{newsAuthor}}">{{newsAuthor}}</text>
+			<text class="date">{{newsDate}}</text>
+		</view>
+		<view class="readCount">阅读 {{newsCount}}</view>
 	</view>
-	<view ></view>
+	<view class='news-contentWrapper'>
+		<view wx:for="{{content}}" class='news-content'>
+			<text class='{{item.type}}'>{{item.text}}</text>
+			<image wx:if="{{item.type=='image'}}" class="news-img" src='{{item.src}}'></image>
+		</view>
+								
+	</view>
 </view>

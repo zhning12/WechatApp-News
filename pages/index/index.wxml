@@ -1,10 +1,10 @@
 <view class='wrapper'>
 	<view class='nav-bar'>
-		<view class='bar-item' wx:for='{{newsTypeList}}'>{{item}}</view>
+		<view class='bar-item' wx:for='{{newsTypeList}}' bindtap="changeType" data-index="{{index}}">{{item}}</view>
 	</view>
 
 	<view class='news-list' >
-		<view class='news-item' wx:for="{{newsList}}" bindtap='bindViewTap'>
+		<view class='news-item' wx:for="{{newsList}}" bindtap='bindViewTap' data-index="{{index}}">
 			<view class='news-text'>
 				<view class='news-title'>{{item.title}}</view>
 				<view class='news-info'>
