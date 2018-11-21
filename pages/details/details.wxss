@@ -1,1 +1,8 @@
 /* pages/details/details.wxss */
+.news-content{
+
+}
+
+.strong{
+    font-weight: bold;
+}

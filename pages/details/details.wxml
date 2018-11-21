@@ -1,0 +1,7 @@
+<view class='news-contentWrap'>
+	<view wx:for="{{content}}" class='news-content'>
+		<text class='{{item.type}}'>{{item.text}}</text>
+		<image  wx:if="{{item.type=='image'}}" src='{{item.src}}'></image>
+	</view>
+	<view ></view>
+</view>
