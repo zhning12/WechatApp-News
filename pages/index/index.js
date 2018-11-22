@@ -24,9 +24,10 @@ Page({
 					news.id = result[i].id;
 					news.title = result[i].title;
 					news.date = result[i].date;
-					news.date = news.date.slice(11, 16);
-					news.author = result[i].source;
-					news.img = result[i].firstImage;
+					news.time = news.date.slice(11,16);
+					news.date = news.date.slice(0, 10);
+					news.author = result[i].source || '未知来源';
+					news.img = result[i].firstImage || '/pictures/big-deft-img.png';
 					newsList.push(news);
 				}
 				this.setData({

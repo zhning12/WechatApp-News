@@ -2,8 +2,8 @@
 	<view class="news-title">{{newsTitle}}</view>
 	<view class="textWrapper">
 		<view class="author-date">
-			<text class="author" wx:if="{{newsAuthor}}">{{newsAuthor}}</text>
-			<text class="date">{{newsDate}}</text>
+			<text class="author">{{newsAuthor}}</text>
+			<text class="date">{{newsDate}} {{newsTime}}</text>
 		</view>
 		<view class="readCount">阅读 {{newsCount}}</view>
 	</view>

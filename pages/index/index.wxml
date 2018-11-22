@@ -9,7 +9,7 @@
 				<view class='news-title'>{{item.title}}</view>
 				<view class='news-info'>
 					<view wx:if="{{item.author}}" class='news-author'>{{item.author}}</view>
-					<view class='news-date'>{{item.date}}</view>
+					<view class='news-date'>{{item.date}} {{item.time}}</view>
 				</view>
 			</view>
 			<image  class='news-img' src='{{item.img}}'></image>

@@ -8,7 +8,8 @@ Page({
 		newsId: 1523074607642,
 		newsTitle:'',
 		newsAuthor:'',
-		newsDate: '',
+		newsTime: '',
+		newsDate:'',
 		newsImage: '',
 		newsCount:'',
 		newsContent:[],
@@ -19,7 +20,6 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad(options) {
-		console.log(options.id);
 		this.setData({
 			newsId: options.id ? options.id : this.data.newsId
 		})
@@ -39,10 +39,11 @@ Page({
 				let newsContent = [];
 				let content = result.content;
 				this.setData({
-					newsImage: result.firstImage,
-					newsDate: result.date.slice(11,16),
+					newsImage: result.firstImage || '/pictures/big-deft-img.png',
+					newsTime: result.date.slice(11,16),
+					newsDate: result.date.slice(0,10),
 					newsCount: result.readCount,
-					newsAuthor: result.source,
+					newsAuthor: result.source || '未知来源',
 					newsTitle: result.title,
 					newsContent: newsContent,
 					content:content
@@ -52,21 +53,6 @@ Page({
 				callback && callback();
 			}
 		})
-	},
-
-
-	/**
-	 * 生命周期函数--监听页面显示
-	 */
-	onShow: function () {
-
-	},
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-	onPullDownRefresh: function () {
-
 	},
 
 })

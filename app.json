@@ -4,10 +4,9 @@
 		"pages/details/details"
 	],
 	"window": {
-		"backgroundTextStyle": "light",
+		"backgroundTextStyle": "dark",
 		"navigationBarBackgroundColor": "#5CACEE",
 		"navigationBarTitleText": "快读·资讯",
-		"navigationBarTextStyle": "white",
-		"enablePullDownRefresh": true
+		"navigationBarTextStyle": "white"
 	}
 }
